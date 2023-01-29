@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "��#\u0000 \u0000b\u0000l\u0000o\u0000g\u0000\r\u0000 \u0000",
   "main": "index.js",
-  "devDependencies": {},
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nodemon": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Shy11er/blog/issues"
   },
-  "homepage": "https://github.com/Shy11er/blog#readme"
+  "homepage": "https://github.com/Shy11er/blog#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20"
+  }
 }
