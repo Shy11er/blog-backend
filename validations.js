@@ -21,6 +21,6 @@ export const loginValidation = [
 export const postCreateValidation = [
   body("title", "Please enter at least 3 characters").isLength({ min: 3 }),
   body("text", "Please enter at least 5 characters").isLength({ min: 5 }),
-  body("tags", "Wrong format of tags").optional().isArray(),
-  body("imageUrl", "Wrong reference of imageUrl").optional().isURL(),
+  body("tags", "Wrong format of tags").optional(),
+  body("imageUrl", "Wrong reference of imageUrl").optional().isString(),
 ];
