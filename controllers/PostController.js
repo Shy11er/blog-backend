@@ -21,7 +21,7 @@ export const create = async (req, res) => {
     const doc = new PostModel({
       title: req.body.title,
       text: req.body.text,
-      tags: req.body.tags,
+      tags: req.body.tags.split(","),
       imageUrl: req.body.imageUrl,
       user: req.userId,
     });
@@ -101,7 +101,7 @@ export const remove = async (req, res) => {
 
         if (!doc) {
           return res.status(404).json({
-            message: "Failed to the post",
+            message: "Failed to get the post",
           });
         }
 
