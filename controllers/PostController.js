@@ -75,7 +75,11 @@ export const getOne = async (req, res) => {
 
 export const getAll = async (req, res) => {
   try {
-    const posts = await PostModel.find().populate("user").exec();
+    const tab = window.localStorage.getItem("tab");
+    const posts = await PostModel.find()
+      .populate("user")
+      .sort(tab === "New" ? "-createdAt" : "-viewsCount")
+      .exec();
 
     res.json(posts);
   } catch (err) {
